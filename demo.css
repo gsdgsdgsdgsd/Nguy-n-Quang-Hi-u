@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+#header{
+    position: fixed;
+    background-color: #000;
+    height: 46px;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+.nav,
+.nav > li {
+    display: inline-block;
+}
+.nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav li:hover a{
+    color: #000;
+    background-color: #ccc; 
+}
+.nav li a{
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+    display: block;
+}
+#nav-right{
+    float: right;
+    margin: 0;
+    padding-right: 40px;
+}
+#nav-left{
+    margin: 0;
+    padding-left: 40px;
+}
+/* End */
+
+/* Banner */
+#banner{
+    position: relative;
+    padding-top: 39%;
+    margin-top: 46px ;
+    background: url('../img/lodging.png') top center / cover no-repeat;
+}
+#text-banner{
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 64px;
+    color: #fff;
+}
+#text-sub-banner{
+    position: absolute;
+    display: block;
+    padding: 40px;
+}
+/* End */
+/* footer */
+.item{
+    margin-top: 135px;
+    min-height: 400px;
+    line-height: 70px;
+
+}
+.footer-text{
+    margin-bottom: 40px;
+    word-break: break-word;
+    line-height: 30px;
+    padding-left: 12px;
+}
+#footer-social{
+    padding: 64px 16px;
+    text-align: center;
+}
+/* End */
+
+/* Footer-social */
+.socials-list{
+    font-size: 24px;
+}
+.socials-list a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+.socials-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+/* End */
+
+/* Mobi+tablet thanh navigation */
+@media (min-width: 740px) and (max-width: 1023px){
+    nav-btn-mobi{
+        width: 24px;
+        height: 24px;
+        margin-top: 10px;
+        margin-left: 8px;
+        color: #fff;
+        display: none;
+    }
+    .nav-input:checked ~ .nav-overley{
+        display: block;
+    }
+    .nav-overley{
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .nav-mobile{
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        width: 240px;
+        max-width: 100%;
+        background-color: #fff;
+        transform: translateX(-100%);
+    }
+    .nav-input{
+        display: none;
+    }
+    
+    .nav-input:checked ~ .nav-mobile {
+        transform: translateX(0);
+    }
+    .nav-mobi-list{
+        margin-top: 24px;
+    }
+    .nav-mobi-link{
+        display: block;
+        padding: 8px 0;
+        margin-left: 20px;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    .nav-btn-close .ti-close{
+        font-weight: bolder;
+        font-size: 20px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    .nav-btn-close:hover .ti-close{
+        color: #fff;
+        background-color: black;
+        cursor: pointer;
+    }
+}
+/* End */
